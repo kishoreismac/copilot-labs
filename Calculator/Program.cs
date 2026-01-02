@@ -14,6 +14,11 @@ Console.WriteLine($"\nArea of circle with radius {radius}: {CalculatorOperations
 double number = 16;
 Console.WriteLine($"Square root of {number}: {CalculatorOperations.SquareRoot(number)}");
 
+double baseNum = 2;
+double exp = 3;
+Console.WriteLine($"\nPower (Demo Feature): {baseNum}^{exp} = {CalculatorOperations.Power(baseNum, exp)}");
+
+
 public static class CalculatorOperations
 {
     public static int Add(int a, int b) => a + b;
@@ -41,5 +46,10 @@ public static class CalculatorOperations
         if (number < 0)
             throw new ArgumentException("Cannot calculate square root of negative number", nameof(number));
         return Math.Sqrt(number);
+    }
+    
+    public static double Power(double baseNumber, double exponent)
+    {
+        return Math.Pow(baseNumber, exponent);
     }
 }

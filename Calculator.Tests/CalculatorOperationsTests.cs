@@ -142,4 +142,46 @@ public class CalculatorOperationsTests
         // Assert
         Assert.Equal(expected, result);
     }
+
+    [Fact]
+    public void Power_PositiveExponent_ReturnsCorrectResult()
+    {
+        // Arrange
+        double baseNumber = 2;
+        double exponent = 3;
+
+        // Act
+        double result = CalculatorOperations.Power(baseNumber, exponent);
+
+        // Assert
+        Assert.Equal(8.0, result);
+    }
+
+    [Fact]
+    public void Power_ZeroExponent_ReturnsOne()
+    {
+        // Arrange
+        double baseNumber = 5;
+        double exponent = 0;
+
+        // Act
+        double result = CalculatorOperations.Power(baseNumber, exponent);
+
+        // Assert
+        Assert.Equal(1.0, result);
+    }
+
+    [Theory]
+    [InlineData(2, 3, 8.0)]
+    [InlineData(5, 2, 25.0)]
+    [InlineData(10, 0, 1.0)]
+    [InlineData(3, -1, 0.333333)]
+    public void Power_VariousInputs_ReturnsCorrectResult(double baseNumber, double exponent, double expected)
+    {
+        // Act
+        double result = CalculatorOperations.Power(baseNumber, exponent);
+
+        // Assert
+        Assert.Equal(expected, result, 5); // 5 decimal places precision
+    }
 }
