@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t0ozFHdrMg782b4CBxbzyHSTGVCuoxWDaQ+y2q8Mw3mbIOG7wd2KIWeth5QXEER5zj5KSyhSkN1PUf1owhZQMg==",
+  "dgSpecHash": "eOslV8hhmbs=",
   "success": true,
-  "projectFilePath": "C:\\Githubcopilot\\copilot-labs\\Calculator\\Calculator.csproj",
+  "projectFilePath": "/home/runner/work/copilot-labs/copilot-labs/Calculator/Calculator.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
